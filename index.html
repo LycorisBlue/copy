@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lycoris</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="topbar">
-        <div class="container">
-            <a href="#">Lycoris@gmail.com</a>
-            <a href="#">disponible de 8h a 10h</a>
-        </div>
-    </div>
-    <nav class="main-menu">
-        <div class="container">
-            <div class="logo">
-                <a href="#">
-                    <h3>SIMPLON</h3>
-                </a>
+    <div class="fixed">
+        <div class="topbar">
+            <div class="container">
+                <a href="#">Lycoris@gmail.com</a>
+                <a href="#">disponible de 8h a 10h</a>
             </div>
-            <ul class="main-menu-list">
-                <li>
-                    <a href="#">Acceuil</a>
-                </li>
-            </ul>
-            <div class="main-menu-infos">
-                <div class="content">
-                    <span>APPELEZ A TOUS MOMENT </span>
-                    <h3>
-                        <a href="#">07994171</a>
-                    </h3>
+        </div>
+        <nav class="main-menu">
+            <div class="container">
+                <div class="logo">
+                    <a href="#">
+                        <h3>SIMPLON</h3>
+                    </a>
+                </div>
+                <ul class="main-menu-list">
+                    <li>
+                        <a href="#">Acceuil</a>
+                    </li>
+                </ul>
+                <div class="main-menu-infos">
+                    <div class="content">
+                        <span>APPELEZ A TOUS MOMENT </span>
+                        <h3>
+                            <a href="#">07994171</a>
+                        </h3>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
     <div class="container-group">
         <div class="content">
             <div class="left">
@@ -45,6 +49,162 @@
                 <button>Passez une requete</button>
             </div>
         </div>
+        <div class="middle">
+            <!-- <button class="btn btn1">Hover Me</button> -->
+            <button class="btn btn2">Processus <br>de paiement <br>rapide</button>
+            <button class="btn btn2">Pas de <br>paiement <br>anticipe</button>
+        </div>
     </div>
+    <div class="about">
+        <div class="p">
+            <p>Lorem ipsum dolor sit amet consectetur </p>
+            <div class="about-title">À propos de nous</div>
+            <div class="first-about-content">
+                CI money est une application de prêt en ligne. Vous pouvez obtenir des prêts sûrs et flexibles à l'aide
+                de CI money.
+            </div>
+            <div class="second-about-content">
+                Notre vision est d'être l'acteur principal de l'accès au financement, en permettant aux populations à
+                faibles revenus d'améliorer leur qualité de vie en comblant leurs déficits financiers et en aidant les
+                micro et petites entreprises à répondre à leurs besoins de financement.
+            </div>
+        </div>
+        <div class="f">
+            <div class="card">
+                <div class="color">
+                    <h2>Calculatrice de pret</h2>
+                </div>
+                <div class="space">
+                    <div class="form-group">
+                        <div class="row">
+                            <span for="weight">FCFA 10000</span>
+                            <span id="weight-output">70000</span>
+                            <span class="limit">FCFA 300000</span>
+                        </div>
+                        <input type="range" id="weight" name="weight" min="10000" max="300000" value="70000"
+                            step="10000">
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="height">1 mois</label>
+                            <span id="height-output">6</span>
+                            <span class="limit">12 mois</span>
+                        </div>
+                        <input type="range" id="height" name="height" min="1" max="12" value="6">
+                    </div>
+                    <div class="form-output">
+                        <span>Payer mensuellement :</span>
+                        <output id="cash-output">70000</output>
+                    </div>
+                    <div class="form-output p-15">
+                        <span>Conditions d'utilisation :</span>
+                        <output id="deley-output">6</output>
+                    </div>
+                    <div class="form-output">
+                        <span>Remboursement total :</span>
+                        <output id="total-output">105000</output>
+                    </div>
+                    <button class="submit">Demander un pret !</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="col">
+                <div class="title">CI money</div>
+                <div class="content">Simple, transparent et innovant : <br>découvrez CI money.</div>
+                <div class="contact">
+                    <span>APPELEZ À TOUT MOMENT</span>
+                    <p>070832561111</p>
+                </div>
+            </div>
+            <div class="col pad-left">
+                <div class="title-2">Explorer</div>
+                <ul>
+                    <li><a href="#">A propos</a></li>
+                    <li><a href="#">Nos services</a></li>
+                    <li><a href="#">Dernieres</a></li>
+                    <li><a href="#">Nouvelles</a></li>
+                    <li><a href="#">Politique</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <div class="title-2">Les News</div>
+                <a href="#">
+                    <img src="img/goo.png" alt="">
+                </a>
+            </div>
+            <div class="col">
+                <div class="bloc">
+                    <div class="title">Contact</div>
+                    <ul>
+                        <li>civ@22aide.com</li>
+                        <li>Du lundi au samedi, de 8h00 à 18h00</li>
+                        <li>Copyright © CI money Tous droits réservés</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright">
+        <p>Copyright © SIMPLON .CO All rights reserved</p>
+    </div>
+    <button class="scroll-to-top" id="scrollToTopBtn">↑</button>
+
+
+    <script>
+        const weightInput = document.getElementById('weight');
+        const weightOutput = document.getElementById('weight-output');
+        const heightInput = document.getElementById('height');
+        const heightOutput = document.getElementById('height-output');
+        const cashOutput = document.getElementById('cash-output');
+        const deleyOutput = document.getElementById('deley-output');
+        const totalOutput = document.getElementById('total-output');
+
+
+        function calculateBmi() {
+            const cash = weightInput.value;
+            const deley = heightInput.value;
+            totalOutput.value = cash * 1.5;
+            deleyOutput.value = deley;
+            cashOutput.value = Math.ceil((cash / deley));
+        }
+
+        weightInput.addEventListener('input', () => {
+            weightOutput.textContent = `${weightInput.value}`;
+            calculateBmi();
+        });
+
+        heightInput.addEventListener('input', () => {
+            heightOutput.textContent = `${heightInput.value}`;
+            calculateBmi();
+        });
+
+    </script>
+
+    <script>
+        // Code JavaScript pour afficher/disparaître le bouton flottant et faire défiler vers le haut
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
 </body>
+
 </html>
