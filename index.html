@@ -7,16 +7,87 @@
     <title>Lycoris</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style1.css">
+    <style>
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            border: .1px solid #ccc;
+            resize: none;
+            padding: 10px;
+            height: 50px;
+            outline: none;
+            font-size: 15px;
+        }
+        textarea{
+            height: 70px;
+            padding: 15px;
+        }
+
+        input[type="radio"] {
+            width: 19px;
+            height: 10px;
+            transform: scale(1.5);
+            margin-right: 7px;
+            color: aquamarine;
+        }
+
+        select{
+            width: 100%;
+            height: 50px;
+            font-size: 15px;
+            font-weight: 500;
+            border: none;
+            outline: none;
+            border: .1px solid #ccc;
+            background-color: white;
+            padding: 10px;
+        }
+
+        option{
+            font-size: 15px;
+            font-weight: 300;
+            color: #333;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+
+        form {
+            width: 100%;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .gender-option,
+        .localisation {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .document-box h3,
+        .infos-destinaire h3 {
+            color: #798490;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 
 <body>
     <div class="fixed">
-        <div class="topbar nav-none">
+        <!-- <div class="topbar nav-none">
             <div class="container">
                 <a href="#">Lycoris@gmail.com</a>
                 <a href="#">disponible de 8h a 10h</a>
             </div>
-        </div>
+        </div> -->
         <nav class="main-menu">
             <div class="container">
                 <div class="logo">
@@ -75,38 +146,51 @@
                 <div class="color">
                     <h2>Calculatrice de pret</h2>
                 </div>
-                <div class="space">
-                    <div class="form-group">
-                        <div class="row">
-                            <span for="weight">FCFA 10000</span>
-                            <span id="weight-output">70000</span>
-                            <span class="limit">FCFA 300000</span>
+                <form action="#" class="form">
+                    <div class="choice-card">
+                        <div class="select-box">
+                            <select>
+                                <option>Extrait de naissance</option>
+                                <option>Copie integrale de l'extrait</option>
+                                <option>Extrait de mariage</option>
+                                <option>Extrait de deces</option>
+                                <option>Copie integrale de deces</option>
+                            </select>
                         </div>
-                        <input type="range" id="weight" name="weight" min="10000" max="300000" value="70000"
-                            step="10000">
                     </div>
-                    <div class="form-group">
-                        <div class="row">
-                            <label for="height">1 mois</label>
-                            <span id="height-output">6</span>
-                            <span class="limit">12 mois</span>
+                    <div class="document-box">
+                        <h3>Document</h3>
+                        <div class="input-box">
+                            <textarea name="" id="" placeholder="Saisir les infos de la piece"></textarea>
                         </div>
-                        <input type="range" id="height" name="height" min="1" max="12" value="6">
+                        <div class="input-box">
+                            <input type="number" min="2" value="2" placeholder="Nombre de pieces Ex:2" required />
+                        </div>
+                        <br>
+                        <div class="gender-option">
+                            <div class="gender">
+                                <input type="radio" id="check" name="gender" checked />
+                                <label for="check-male">Se faire livrer</label>
+                            </div>
+                            <div class="gender">
+                                <input type="radio" id="check-female" name="gender" />
+                                <label for="check-female">A la mairie</label>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-output">
-                        <span>Payer mensuellement :</span>
-                        <output id="cash-output">70000</output>
+                    <div class="infos-destinaire">
+                        <h3>Infos</h3>
+                        <input type="text" placeholder="Nom d'utilisateur" required />
+                        <input type="email" placeholder="Votre mail" required />
+                        <input type="number" placeholder="Votre numero" required />
                     </div>
-                    <div class="form-output p-15">
-                        <span>Conditions d'utilisation :</span>
-                        <output id="deley-output">6</output>
-                    </div>
-                    <div class="form-output">
-                        <span>Remboursement total :</span>
-                        <output id="total-output">105000</output>
-                    </div>
+                    <select>
+                        <option>Daloa</option>
+                        <option>Hors de daloa</option>
+                        <option>A l'etranger</option>
+                    </select>
                     <button class="submit">Demander un pret !</button>
-                </div>
+                </form>
             </div>
         </div>
     </div>
@@ -202,6 +286,18 @@
                 top: 0,
                 behavior: 'smooth'
             });
+        });
+    </script>
+    <script>
+        const radio1 = document.querySelector('#check');
+        const radio2 = document.querySelector('#check-female');
+    
+        radio1.addEventListener('click', () => {
+            alert(document.querySelector('label[for="check-male"]').textContent);
+        });
+    
+        radio2.addEventListener('click', () => {
+            alert(document.querySelector('label[for="check-female"]').textContent);
         });
     </script>
 
